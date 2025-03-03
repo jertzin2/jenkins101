@@ -13,8 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                sudo apt update
-                sudo apt install -y python3-venv 
+                apt update && apt install -y python3-venv
                 python3 -m venv venv
                 source venv/bin/activate
                 pip install -r requirements.txt
